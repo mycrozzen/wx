@@ -1,0 +1,28 @@
+#!/bin/sh
+
+SCRIPT_WX=$HOME/MGH/Znew/wx
+
+COMMAND=$1
+
+case "$COMMAND" in
+    -sr)
+        node "$SCRIPT_WX/server/wx-server.js" "$2"
+        ;;
+        
+    cli)
+        shift
+        node $SCRIPT_WX/cli/wx-cli.js "$@"
+        ;;
+
+    v)
+        shift
+        node $SCRIPT_WX/bin/var.js "$@"
+        ;;
+        
+    *)
+        echo "[!] wx-arg  : argumen not found !"
+        echo "[/] Type    : wx help "
+        exit 1
+        ;;
+esac
+

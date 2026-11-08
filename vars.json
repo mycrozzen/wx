@@ -1,0 +1,5 @@
+{
+  "run": "wx v ?run-msg && wx cli && wx v ?run-1",
+  "run-msg": "Running default wx-cli",
+  "run-1": "wx-cli is running.."
+}
